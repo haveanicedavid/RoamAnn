@@ -1,5 +1,9 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 
+## Netlify
+
+[![Netlify Status](https://api.netlify.com/api/v1/badges/22ea3d8f-1e8b-4a4b-a3ee-aa4b2ace9856/deploy-status)](https://app.netlify.com/sites/roamann-proxy/deploys)
+
 ## Available Scripts
 
 In the project directory, you can run:
