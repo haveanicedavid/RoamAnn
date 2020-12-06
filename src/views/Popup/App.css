@@ -5,6 +5,12 @@ body {
     sans-serif;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
+  height: 100vh;
+}
+
+html {
+  min-width: 350px;
+  min-height: 600px;
 }
 
 code {
@@ -14,9 +20,6 @@ code {
 
 .App {
   text-align: center;
-}
-
-.App-header {
   background-color: #282c34;
   min-height: 100vh;
   display: flex;

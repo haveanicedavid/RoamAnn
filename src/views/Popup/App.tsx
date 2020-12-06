@@ -1,25 +1,26 @@
-import React from 'react'
+import React, { useEffect } from 'react'
 import './App.css'
+import { GlobalStyles } from 'twin.macro'
+import { Editor } from 'components/molecules'
+import { useStore } from 'store'
+import { dailyNoteDate } from 'helpers'
 
 function App() {
+  const createBlock = useStore((s) => s.createBlock)
+  async function handleClick(e: any) {
+    const res = await createBlock('hello', dailyNoteDate())
+    console.log('res :>> ', res)
+  }
+
   return (
-    <div className="App">
-      <header className="App-header">
-        <p>Popup page</p>
-        <p>
-          Edit <code>src/views/Popup/App.tsx</code> and save.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    <>
+      <GlobalStyles />
+      <button onClick={handleClick}>create</button>
+      <div tw="px-10 py-5">
+        <Editor />
+      </div>
+    </>
+  )
 }
 
 export default App
